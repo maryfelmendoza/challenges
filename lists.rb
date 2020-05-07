@@ -8,7 +8,7 @@ class Node
   end
   
   def to_s
-    "Node with value: #{@value}"
+    "The number located at this position is: #{@value}"
   end
 end
 
@@ -29,21 +29,21 @@ class LinkedList
     return node if !node.next while (node = node.next)
   end
   
-  def print
-    node = @head
-    puts node
-    while (node = node.next)
-      puts node
+  def get(index)
+    current=@head
+    index.size do
+      current=current.next_node
     end
+    return current
   end
+  
 end
 
 
 
 list = LinkedList.new
 
-list.add(10)
-list.add(20)
-list.add(30)
+list.add(3)
+list.add(5)
 
-list.print
+puts list.get(1)
