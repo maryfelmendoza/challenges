@@ -32,7 +32,7 @@ class LinkedList
   def get(index)
     current=@head
     index.times do
-      current=current.next
+      current = current.next
     end
     return current
   end
@@ -44,17 +44,17 @@ class LinkedList
     
     if (index==0) 
       #remove the first element from the list
-      current=@head 
+      current = @head 
       #get the element after the head and make head equal to it
-      current.next=new_current 
-      @head=new_current
+      new_current = current.next
+      @head = new_current
     end
     
     if (index>0)
       current= get(index) #(desired node to be removed)
-      before_current= get(index-1) 
-      after_current=current.next
-      before_current.next=after_current
+      before_current = get(index-1) 
+      after_current = current.next
+      before_current.next = after_current
     end
       
   end
@@ -75,9 +75,11 @@ puts list.get(1)
 puts list.get(2)
 puts list.get(3)
 
-list.remove(2)
+list.remove(0)
 
 puts list.get(0)
 puts list.get(1)
 puts list.get(2)
 puts list.get(3)
+
+
