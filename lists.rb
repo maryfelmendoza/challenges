@@ -31,8 +31,8 @@ class LinkedList
   
   def get(index)
     current=@head
-    index.size do
-      current=current.next_node
+    index.times do
+      current=current.next
     end
     return current
   end
